@@ -50,6 +50,7 @@ function loadScene()
 
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
+    geoEsfera.background = new THREE.Color( 12, 4, 6 );
 
     // Objetos dibujables
     const cubo = new THREE.Mesh( geoCubo, material );
