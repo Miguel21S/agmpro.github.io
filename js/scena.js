@@ -38,7 +38,7 @@ function init()
     scene.background = new THREE.Color(0.5,0.5,0.5);
 
     // Camara
-    let divcam = window.innerWidth/window.innerHeight
+    const divcam = window.innerWidth/window.innerHeight
     camera = new THREE.PerspectiveCamera( 75, divcam, 0.1,1000);
     camera.position.set( 0.5, 2, 7 );
     camera.lookAt( new THREE.Vector3(0,1,0) );
@@ -47,7 +47,7 @@ function init()
 //! Carga de objetos y construccion del grafo
 function loadScene()
 {
-    const material = new THREE.MeshBasicMaterial( { color: 'red', wireframe: true } );
+    const material = new THREE.MeshBasicMaterial( { color: 'yello', wireframe: true } );
 
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
@@ -60,7 +60,7 @@ function loadScene()
     esfera.position.x = 1;
 
     // Suelo
-    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(10,20, 10,20), material );
+    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
     suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
