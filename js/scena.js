@@ -60,7 +60,7 @@ function loadScene()
     esfera.position.x = 1;
 
     // Suelo
-    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(10,10, 10,10), material );
+    const suelo = new THREE.Mesh( new THREE.PlaneGeometry(10,20, 10,20), material );
     suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
