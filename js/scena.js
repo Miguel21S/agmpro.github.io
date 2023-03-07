@@ -54,7 +54,7 @@ function loadScene(){
     // Objetos dibujables
     const cubo = new THREE.Mesh( geoCubo, material );
     const esfera = new THREE.Mesh( geoEsfera, material );
-    cubo.position.x = 1.9;
+    cubo.position.x = 1;
     esfera.position.x = 1;
 
     // Suelo
