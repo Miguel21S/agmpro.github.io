@@ -25,8 +25,7 @@ loadScene();
 render();
 
 //! Inicializacion del entorno: motor, camara y escena
-function init()
-{
+function init(){
     // Motor de render
     renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -38,24 +37,24 @@ function init()
     scene.background = new THREE.Color(0.5,0.5,0.5);
 
     // Camara
-    camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1,1000);
+    let divcam = window.innerWidth / window.innerHeight
+    camera = new THREE.PerspectiveCamera( 75, divcam, 0.1,1000);
     camera.position.set( 0.5, 2, 7 );
     camera.lookAt( new THREE.Vector3(0,1,0) );
 }
 
 //! Carga de objetos y construccion del grafo
-function loadScene()
-{
+function loadScene(){
     const material = new THREE.MeshBasicMaterial( { color: 'red', wireframe: true } );
 
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
-    geoEsfera.background = new THREE.Color( 12, 4, 6 );
+    geoEsfera.background = new THREE.Color( 20, 5, 11 );
 
     // Objetos dibujables
     const cubo = new THREE.Mesh( geoCubo, material );
     const esfera = new THREE.Mesh( geoEsfera, material );
-    cubo.position.x = -1;
+    cubo.position.x = 1.9;
     esfera.position.x = 1;
 
     // Suelo
