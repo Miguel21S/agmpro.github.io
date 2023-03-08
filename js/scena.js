@@ -47,8 +47,7 @@ function init()
 //! Carga de objetos y construccion del grafo
 function loadScene()
 {
-    const material = new THREE.MeshBasicMaterial( { wireframe: true } );
-
+    
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
     geoEsfera.background = new THREE.Color( 12, 4, 6 );
@@ -65,6 +64,9 @@ function loadScene()
     suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
+
+    const material = new THREE.MeshBasicMaterial( { color: "rbg(12,8,8)",map: suelo } );
+
 
     // Importar un modelo en json
     const loader = new THREE.ObjectLoader();
