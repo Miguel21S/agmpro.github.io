@@ -69,7 +69,7 @@ function loadScene()
     const imageSuelo = new THREE.TextureLoader().load(path+"suelo.jpg", material);
 
     const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(150,150,150)",map:imageSuelo});
-    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,10,10), matsuelo);
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,100,100), matsuelo);
     suelo.rotation.x = -Math.PI/2;
     suelo.position.y = -0.1;
     suelo.receiveShadow = true;
