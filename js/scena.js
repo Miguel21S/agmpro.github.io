@@ -51,9 +51,9 @@ function loadScene()
     const imageSuelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
 
     const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(165,165,165)",map:imageSuelo});
-    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(20,20,20,20), matsuelo);
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,10,10), matsuelo);
     suelo.position.x = -Math.PI/2;
-    suelo.position.y = -0.2;
+    suelo.position.y = -0.1;
     suelo.receiveShadow = true;
     scene.add(suelo);
 
