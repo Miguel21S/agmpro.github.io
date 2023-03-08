@@ -47,19 +47,10 @@ function init()
 //! Carga de objetos y construccion del grafo
 function loadScene()
 {
-    const path = './images/';
-    const imageSuelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
+    
+    const material = new THREE.MeshBasicMaterial( { wireframe: true } );
 
-    const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(165,165,165)",map:imageSuelo});
-    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,10,10), matsuelo);
-    suelo.position.x = -Math.PI/2;
-    suelo.position.y = -0.1;
-    //suelo.receiveShadow = true;
-    scene.add(suelo);
-
-    //const material = new THREE.MeshBasicMaterial( { color: 'yellow', wireframe: true } );
-
-    /*const geoCubo = new THREE.BoxGeometry( 2,2,2 );
+    const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
     geoEsfera.background = new THREE.Color( 12, 4, 6 );
 
@@ -67,13 +58,23 @@ function loadScene()
     const cubo = new THREE.Mesh( geoCubo, material );
     const esfera = new THREE.Mesh( geoEsfera, material );
     cubo.position.x = -1;
-    esfera.position.x = 1;*/
+    esfera.position.x = 1;
 
     // Suelo
     //const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
     /*suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
+    scene.add(suelo);*/
+    const path = './images/';
+    const imageSuelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
+
+    const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(150,150,150)",map:imageSuelo});
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,10,10), matsuelo);
+    suelo.position.x = -Math.PI/2;
+    suelo.position.y = -0.1;
+    //suelo.receiveShadow = true;
     scene.add(suelo);
+
 
     // Importar un modelo en json
     const loader = new THREE.ObjectLoader();
@@ -108,15 +109,15 @@ function loadScene()
     esferaCubo.add( cubo );
     esferaCubo.add( esfera );
     cubo.add( new THREE.AxesHelper(1) );
-    scene.add( new THREE.AxesHelper(3) );*/
+    scene.add( new THREE.AxesHelper(3) );
 
 }
 
 //! Etapa de actualizacion para cada frame
 function update()
 {
-    /*angulo += 0.01;
-    esferaCubo.rotation.y = angulo;*/
+    angulo += 0.01;
+    esferaCubo.rotation.y = angulo;
 }
 
 //! Callback de refresco (se encola a si misma)
