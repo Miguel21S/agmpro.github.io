@@ -48,7 +48,7 @@ function init()
 function loadScene()
 {
     
-    const material = new THREE.MeshBasicMaterial( { wireframe: true } );
+    const material = new THREE.MeshBasicMaterial( {color: "green", wireframe: true } );
 
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
