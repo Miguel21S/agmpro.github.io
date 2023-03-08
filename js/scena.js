@@ -48,7 +48,7 @@ function init()
 function loadScene()
 {
     
-    const geoCubo = new THREE.BoxGeometry( 2,2,2 );
+    /*const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
     geoEsfera.background = new THREE.Color( 12, 4, 6 );
 
@@ -56,12 +56,12 @@ function loadScene()
     const cubo = new THREE.Mesh( geoCubo, material );
     const esfera = new THREE.Mesh( geoEsfera, material );
     cubo.position.x = -1;
-    esfera.position.x = 1;
+    esfera.position.x = 1;*/
 
     // Suelo
     //const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
     const suelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
-    suelo.rotation.x = -Math.PI / 2;
+    /*suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
 
@@ -101,21 +101,21 @@ function loadScene()
     esferaCubo.add( cubo );
     esferaCubo.add( esfera );
     cubo.add( new THREE.AxesHelper(1) );
-    scene.add( new THREE.AxesHelper(3) );
+    scene.add( new THREE.AxesHelper(3) );*/
 
 }
 
 //! Etapa de actualizacion para cada frame
 function update()
 {
-    angulo += 0.01;
-    esferaCubo.rotation.y = angulo;
+    /*angulo += 0.01;
+    esferaCubo.rotation.y = angulo;*/
 }
 
 //! Callback de refresco (se encola a si misma)
 function render()
 {
-    requestAnimationFrame( render );
+   /* requestAnimationFrame( render );
     update();
-    renderer.render( scene, camera );
+    renderer.render( scene, camera );*/
 }
