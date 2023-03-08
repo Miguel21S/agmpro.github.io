@@ -50,10 +50,11 @@ function loadScene()
     const path = './images/';
     const imageSuelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
 
-    constmatImageSuelo = new THREE.MeshPhongMaterial({color:"rgb(165,165,165)",map:imageSuelo});
-    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(20,20,20,20));
+    const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(165,165,165)",map:imageSuelo});
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(20,20,20,20), matsuelo);
     suelo.position.x = -Math.PI/2;
     suelo.position.y = -0.2;
+    suelo.receiveShadow = true;
     scene.add(suelo);
 
     //const material = new THREE.MeshBasicMaterial( { color: 'yellow', wireframe: true } );
