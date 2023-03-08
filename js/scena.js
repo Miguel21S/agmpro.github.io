@@ -54,7 +54,7 @@ function loadScene()
     const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,10,10), matsuelo);
     suelo.position.x = -Math.PI/2;
     suelo.position.y = -0.1;
-    suelo.receiveShadow = true;
+    //suelo.receiveShadow = true;
     scene.add(suelo);
 
     //const material = new THREE.MeshBasicMaterial( { color: 'yellow', wireframe: true } );
