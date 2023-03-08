@@ -61,7 +61,7 @@ function loadScene()
 
     // Suelo
     //const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
-    const suelo = new THREE.ImageUtils.loadTexture("images/cespedeVerde.png" , material);
+    const suelo = new THREE.ImageUtils.loadTexture("images/cespedeVerde.jpg" , material);
     suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
