@@ -122,7 +122,7 @@ function update()
 //! Callback de refresco (se encola a si misma)
 function render()
 {
-   /* requestAnimationFrame( render );
+    requestAnimationFrame( render );
     update();
-    renderer.render( scene, camera );*/
+    renderer.render( scene, camera );
 }
