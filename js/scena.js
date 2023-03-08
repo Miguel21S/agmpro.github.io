@@ -52,7 +52,7 @@ function loadScene()
 
     const geoCubo = new THREE.BoxGeometry( 2,2,2 );
     const geoEsfera = new THREE.SphereGeometry( 1, 20,20 );
-    geoEsfera.background = new THREE.Color( 12, 4, 6 );
+    //geoEsfera.background = new THREE.Color( 12, 4, 6 );
 
     // Objetos dibujables
     const cubo = new THREE.Mesh( geoCubo, material );
@@ -61,10 +61,7 @@ function loadScene()
     esfera.position.x = 1;
 
     // Suelo
-    //const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
-    /*suelo.rotation.x = -Math.PI / 2;
-    suelo.position.y = -0.1;
-    scene.add(suelo);*/
+    
     const path = './images/';
     const imageSuelo = new THREE.TextureLoader().load(path+"suelo.jpg", material);
 
