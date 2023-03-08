@@ -48,6 +48,14 @@ function init()
 function loadScene()
 {
     const path = './images/';
+    const imageSuelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
+
+    constmatImageSuelo = new THREE.MeshPhongMaterial({color:"rgb(165,165,165)",map:imageSuelo});
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(20,20,20,20));
+    suelo.position.x = -Math.PI/2;
+    suelo.position.y = -0.2;
+    scene.add(suelo);
+
     //const material = new THREE.MeshBasicMaterial( { color: 'yellow', wireframe: true } );
 
     /*const geoCubo = new THREE.BoxGeometry( 2,2,2 );
@@ -62,7 +70,6 @@ function loadScene()
 
     // Suelo
     //const suelo = new THREE.Mesh( new THREE.PlaneGeometry(20,20, 20,20), material );
-    const suelo = new THREE.TextureLoader().load(path+"cespedeVerde.jpg");
     /*suelo.rotation.x = -Math.PI / 2;
     suelo.position.y = -0.1;
     scene.add(suelo);
