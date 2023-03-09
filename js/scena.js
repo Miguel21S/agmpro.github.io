@@ -35,7 +35,7 @@ function init()
 
     // Escena
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0.5,0.5,0.5);
+    //scene.background = new THREE.Color(0.5,0.5,0.5);
 
     // Camara
     const divcam = window.innerWidth/window.innerHeight
