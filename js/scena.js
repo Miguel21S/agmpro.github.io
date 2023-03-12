@@ -63,9 +63,14 @@ function loadScene()
     // Suelo
     
     const path = './images/';
-    const imageSuelo = new THREE.TextureLoader().load(path+"cespede.png", function(texture){
-    suelo.background = texture;
-    });
+    /*const imageSuelo = new THREE.TextureLoader().load(path+"cespede.png", function(texture){
+    scene.background = texture;
+    });*/
+
+    const imageSuelo = new THREE.MeshBasicMaterial({
+        map: new THREE.TextureLoader().load(path+"suelo.png"),
+        //side: THREE.DoubleSide
+    })
 
     const matsuelo = new THREE.MeshStandardMaterial({map:imageSuelo});
     const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,100,100), matsuelo);
