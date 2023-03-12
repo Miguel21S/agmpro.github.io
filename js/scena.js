@@ -67,8 +67,8 @@ function loadScene()
     scene.background = texture;
     });
 
-    const matsuelo = new THREE.MeshStandardMaterial({map:imageSuelo});
-    const suelo = new THREE.Mesh(new THREE.GridHelper(10,10,100,100), matsuelo);
+    const matsuelo = new THREE.MeshBasicMaterial({map:imageSuelo});
+    const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,100,100), matsuelo);
     suelo.rotation.x = -Math.PI/2;
     suelo.position.y = -0.1;
     //suelo.receiveShadow = true;
