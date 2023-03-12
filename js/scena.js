@@ -72,7 +72,7 @@ function loadScene()
     suelo.rotation.x = -Math.PI/2;
     suelo.position.y = -0.1;
     //suelo.receiveShadow = true;
-    //scene.add(suelo);
+    scene.add(suelo);
 
 
     // Importar un modelo en json
