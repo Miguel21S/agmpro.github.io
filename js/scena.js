@@ -64,10 +64,10 @@ function loadScene()
     
     const path = './images/';
     const imageSuelo = new THREE.TextureLoader().load(path+"cespede.png", function(texture){
-    scene.background = texture;
+    suelo.background = texture;
     });
 
-    const matsuelo = new THREE.MeshStandardMaterial({color:"rgb(150,150,150)",map:imageSuelo});
+    const matsuelo = new THREE.MeshStandardMaterial({map:imageSuelo});
     const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,100,100), matsuelo);
     suelo.rotation.x = -Math.PI/2;
     suelo.position.y = -0.1;
