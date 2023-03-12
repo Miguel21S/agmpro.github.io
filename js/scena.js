@@ -63,21 +63,16 @@ function loadScene()
     // Suelo
     
     const path = './images/';
-    /*const imageSuelo = new THREE.TextureLoader().load(path+"cespede.png", function(texture){
+    const imageSuelo = new THREE.TextureLoader().load(path+"cespede.png", function(texture){
     scene.background = texture;
-    });*/
-
-    const imageSuelo = new THREE.MeshBasicMaterial({
-        map: new THREE.TextureLoader().load(path+"suelo.png"),
-        //side: THREE.DoubleSide
-    })
+    });
 
     const matsuelo = new THREE.MeshStandardMaterial({map:imageSuelo});
     const suelo = new THREE.Mesh(new THREE.PlaneGeometry(10,10,100,100), matsuelo);
     suelo.rotation.x = -Math.PI/2;
     suelo.position.y = -0.1;
     //suelo.receiveShadow = true;
-    scene.add(suelo);
+    //scene.add(suelo);
 
 
     // Importar un modelo en json
