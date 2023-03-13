@@ -11,6 +11,7 @@
 // Modulos necesarios
 import * as THREE from "../lib/three.module.js";
 import {GLTFLoader} from "../lib/GLTFLoader.module.js";
+import {GUI} from "../lib/lil-gui.module.min.js";
 
 // Variables de consenso
 let renderer, scene, camera;
@@ -74,6 +75,14 @@ function loadScene()
     //suelo.receiveShadow = true;
     scene.add(suelo);
 
+    const gui = new THREE.GUI();
+    const options = {
+        sphereColor: "#ffea00",
+    };
+
+    gui.add(options, "sphereColor").onChange = (function(e){
+        esfera.material.color.set(e)
+    });
 
     // Importar un modelo en json
     const loader = new THREE.ObjectLoader();
